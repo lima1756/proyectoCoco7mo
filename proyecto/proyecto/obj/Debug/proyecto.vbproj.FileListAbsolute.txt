@@ -1,0 +1,17 @@
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\bin\Debug\proyecto.exe.config
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\bin\Debug\proyecto.exe
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\bin\Debug\proyecto.pdb
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\bin\Debug\proyecto.xml
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.vbprojResolveAssemblyReference.cache
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.Inicio.resources
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.Resources.resources
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.vbproj.GenerateResource.Cache
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.exe
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.xml
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.pdb
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.Administrador.resources
+D:\OneDrive\CETI\Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.Vendedor.resources
+D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\bin\Debug\proyecto.exe.config
+D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.exe
+D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.xml
+D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.pdb
