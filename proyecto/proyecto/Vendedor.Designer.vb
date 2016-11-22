@@ -38,8 +38,8 @@ Partial Class Vendedor
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TbxFolioRegresar = New System.Windows.Forms.TextBox()
+        Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabControl2.SuspendLayout()
@@ -186,8 +186,8 @@ Partial Class Vendedor
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.Label6)
-        Me.TabPage2.Controls.Add(Me.TextBox5)
-        Me.TabPage2.Controls.Add(Me.Button2)
+        Me.TabPage2.Controls.Add(Me.TbxFolioRegresar)
+        Me.TabPage2.Controls.Add(Me.BtnRegresar)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -205,21 +205,21 @@ Partial Class Vendedor
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Folio de venta"
         '
-        'TextBox5
+        'TbxFolioRegresar
         '
-        Me.TextBox5.Location = New System.Drawing.Point(78, 76)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 1
+        Me.TbxFolioRegresar.Location = New System.Drawing.Point(78, 76)
+        Me.TbxFolioRegresar.Name = "TbxFolioRegresar"
+        Me.TbxFolioRegresar.Size = New System.Drawing.Size(100, 20)
+        Me.TbxFolioRegresar.TabIndex = 1
         '
-        'Button2
+        'BtnRegresar
         '
-        Me.Button2.Location = New System.Drawing.Point(93, 102)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Regresar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnRegresar.Location = New System.Drawing.Point(93, 102)
+        Me.BtnRegresar.Name = "BtnRegresar"
+        Me.BtnRegresar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnRegresar.TabIndex = 0
+        Me.BtnRegresar.Text = "Regresar"
+        Me.BtnRegresar.UseVisualStyleBackColor = True
         '
         'Vendedor
         '
@@ -251,8 +251,8 @@ Partial Class Vendedor
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents TbxFolioRegresar As TextBox
+    Friend WithEvents BtnRegresar As Button
     Friend WithEvents CbxZona As ComboBox
     Friend WithEvents CbxNumero As ComboBox
     Friend WithEvents CbxFila As ComboBox

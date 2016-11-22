@@ -12,7 +12,7 @@ Public Class Inicio
 
         ' Add any initialization after the InitializeComponent() call.
         Dim Vendedor As New Vendedor()
-        Vendedor.Show()
+
     End Sub
 
 
