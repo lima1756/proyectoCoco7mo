@@ -24,9 +24,9 @@ Partial Class Inicio
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tbxUsuario = New System.Windows.Forms.TextBox()
+        Me.tbxContraseña = New System.Windows.Forms.TextBox()
+        Me.btnIniciar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -47,37 +47,37 @@ Partial Class Inicio
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña:"
         '
-        'TextBox1
+        'tbxUsuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(38, 45)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(135, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.tbxUsuario.Location = New System.Drawing.Point(38, 45)
+        Me.tbxUsuario.Name = "tbxUsuario"
+        Me.tbxUsuario.Size = New System.Drawing.Size(135, 20)
+        Me.tbxUsuario.TabIndex = 2
         '
-        'TextBox2
+        'tbxContraseña
         '
-        Me.TextBox2.Location = New System.Drawing.Point(38, 86)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(135, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.tbxContraseña.Location = New System.Drawing.Point(38, 86)
+        Me.tbxContraseña.Name = "tbxContraseña"
+        Me.tbxContraseña.Size = New System.Drawing.Size(135, 20)
+        Me.tbxContraseña.TabIndex = 3
         '
-        'Button1
+        'btnIniciar
         '
-        Me.Button1.Location = New System.Drawing.Point(65, 112)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Iniciar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnIniciar.Location = New System.Drawing.Point(65, 112)
+        Me.btnIniciar.Name = "btnIniciar"
+        Me.btnIniciar.Size = New System.Drawing.Size(75, 23)
+        Me.btnIniciar.TabIndex = 4
+        Me.btnIniciar.Text = "Iniciar"
+        Me.btnIniciar.UseVisualStyleBackColor = True
         '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(216, 155)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnIniciar)
+        Me.Controls.Add(Me.tbxContraseña)
+        Me.Controls.Add(Me.tbxUsuario)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Inicio"
@@ -89,7 +89,7 @@ Partial Class Inicio
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents tbxUsuario As TextBox
+    Friend WithEvents tbxContraseña As TextBox
+    Friend WithEvents btnIniciar As Button
 End Class

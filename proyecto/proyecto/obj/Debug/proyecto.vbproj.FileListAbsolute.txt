@@ -15,3 +15,16 @@ D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\p
 D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.exe
 D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.xml
 D:\OneDrive\CETI\7 - Septimo Semestre\Programación Aplicada\Proyecto\proyecto\proyecto\obj\Debug\proyecto.pdb
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\bin\Debug\proyecto.exe.config
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.exe
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.xml
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.pdb
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\bin\Debug\proyecto.exe
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\bin\Debug\proyecto.pdb
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\bin\Debug\proyecto.xml
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.vbprojResolveAssemblyReference.cache
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.Administrador.resources
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.Inicio.resources
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.Resources.resources
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.Vendedor.resources
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.vbproj.GenerateResource.Cache
