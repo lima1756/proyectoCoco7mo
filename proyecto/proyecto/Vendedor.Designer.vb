@@ -24,17 +24,15 @@ Partial Class Vendedor
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CbxNumero = New System.Windows.Forms.ComboBox()
+        Me.CbxFila = New System.Windows.Forms.ComboBox()
+        Me.CbxZona = New System.Windows.Forms.ComboBox()
+        Me.ComprarBoleto = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.ComboBoxConcierto = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
@@ -60,17 +58,15 @@ Partial Class Vendedor
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.CbxNumero)
+        Me.TabPage1.Controls.Add(Me.CbxFila)
+        Me.TabPage1.Controls.Add(Me.CbxZona)
+        Me.TabPage1.Controls.Add(Me.ComprarBoleto)
         Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.ComboBox1)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.TextBox4)
+        Me.TabPage1.Controls.Add(Me.ComboBoxConcierto)
         Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
         Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
         Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
         Me.TabPage1.Controls.Add(Me.TabControl2)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -80,14 +76,38 @@ Partial Class Vendedor
         Me.TabPage1.Text = "Venta"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'CbxNumero
         '
-        Me.Button1.Location = New System.Drawing.Point(184, 195)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Vender"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.CbxNumero.FormattingEnabled = True
+        Me.CbxNumero.Location = New System.Drawing.Point(84, 119)
+        Me.CbxNumero.Name = "CbxNumero"
+        Me.CbxNumero.Size = New System.Drawing.Size(54, 21)
+        Me.CbxNumero.TabIndex = 14
+        '
+        'CbxFila
+        '
+        Me.CbxFila.FormattingEnabled = True
+        Me.CbxFila.Location = New System.Drawing.Point(17, 118)
+        Me.CbxFila.Name = "CbxFila"
+        Me.CbxFila.Size = New System.Drawing.Size(47, 21)
+        Me.CbxFila.TabIndex = 13
+        '
+        'CbxZona
+        '
+        Me.CbxZona.FormattingEnabled = True
+        Me.CbxZona.Location = New System.Drawing.Point(17, 79)
+        Me.CbxZona.Name = "CbxZona"
+        Me.CbxZona.Size = New System.Drawing.Size(72, 21)
+        Me.CbxZona.TabIndex = 12
+        '
+        'ComprarBoleto
+        '
+        Me.ComprarBoleto.Location = New System.Drawing.Point(180, 175)
+        Me.ComprarBoleto.Name = "ComprarBoleto"
+        Me.ComprarBoleto.Size = New System.Drawing.Size(75, 36)
+        Me.ComprarBoleto.TabIndex = 11
+        Me.ComprarBoleto.Text = "Comprar Boleto"
+        Me.ComprarBoleto.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -98,77 +118,40 @@ Partial Class Vendedor
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Concierto: "
         '
-        'ComboBox1
+        'ComboBoxConcierto
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(17, 34)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 9
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 182)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(38, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Edad: "
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(17, 198)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 7
+        Me.ComboBoxConcierto.FormattingEnabled = True
+        Me.ComboBoxConcierto.Location = New System.Drawing.Point(17, 34)
+        Me.ComboBoxConcierto.Name = "ComboBoxConcierto"
+        Me.ComboBoxConcierto.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxConcierto.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 101)
+        Me.Label3.Location = New System.Drawing.Point(14, 102)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 13)
+        Me.Label3.Size = New System.Drawing.Size(23, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Apellido Paterno: "
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(17, 117)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.Label3.Text = "Fila"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 140)
+        Me.Label2.Location = New System.Drawing.Point(81, 103)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 13)
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Apellido Materno: "
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(17, 156)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.Label2.Text = "Numero"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(14, 63)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Nombre: "
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(17, 79)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.Label1.Text = "Zona:"
         '
         'TabControl2
         '
@@ -257,17 +240,12 @@ Partial Class Vendedor
     End Sub
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ComprarBoleto As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents ComboBoxConcierto As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
@@ -275,4 +253,7 @@ Partial Class Vendedor
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents CbxZona As ComboBox
+    Friend WithEvents CbxNumero As ComboBox
+    Friend WithEvents CbxFila As ComboBox
 End Class

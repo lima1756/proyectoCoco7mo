@@ -2,7 +2,7 @@
 
 Public Class Inicio
     Private conexion As SqlConnection
-
+    Public idUsuario As String
     Public Sub New()
 
         ' This call is required by the designer.
@@ -11,7 +11,8 @@ Public Class Inicio
 
 
         ' Add any initialization after the InitializeComponent() call.
-
+        Dim Vendedor As New Vendedor()
+        Vendedor.Show()
     End Sub
 
 
@@ -48,6 +49,7 @@ Public Class Inicio
                         validC = True
 
                         trabajador = datos("admin")
+                        idUsuario = datos("ID_Trabajador")
                     Else
 
                     End If
@@ -81,17 +83,9 @@ Public Class Inicio
                     End If
                 End If
 
-
-                End If
-
-
-
-
-
-
-
+            End If
         Else
-                MessageBox.Show("Ingrese datos")
+            MessageBox.Show("Ingrese datos")
 
         End If
         conexion.Close()
