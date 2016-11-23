@@ -18,6 +18,16 @@ Public Class Vendedor
 
 
     Private Sub Vendedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ComboBoxConcierto.Items.Clear()
+
+        CbxFila.Text = ""
+        CbxFila.Items.Clear()
+        CbxNumero.Text = ""
+        CbxNumero.Items.Clear()
+        CbxZona.Text = ""
+        CbxZona.Items.Clear()
+
         CbxZona.DropDownStyle = ComboBoxStyle.DropDownList
         CbxNumero.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBoxConcierto.DropDownStyle = ComboBoxStyle.DropDownList
@@ -206,7 +216,7 @@ Public Class Vendedor
         While data2.Read
             FolioCompra = data2(RTrim("UltFolio"))
         End While
-        MessageBox.Show(FolioCompra)
+
         data2.Close()
 
 
@@ -217,20 +227,25 @@ Public Class Vendedor
         End While
         data2.Close()
 
-        MessageBox.Show("asiento", IDASIENTO)
-        MessageBox.Show("folio", FolioCompra)
-        MessageBox.Show("idconcierto", idConciertoG)
-        MessageBox.Show("idtrabajo", IDTRABAJA)
-
 
         InsertarBoleto = New SqlCommand("Insert into Boleto (ID_Asiento,Folio_Compra,ID_Concierto,ID_Trabajador) values (" + IDASIENTO + "," + FolioCompra + "," + idConciertoG + "," + IDTRABAJA + ")", conexion)
 
         InsertarBoleto.ExecuteNonQuery()
 
+        MessageBox.Show(FolioCompra, "Vendido")
 
 
 
         conexion.Close()
+
+        ComboBoxConcierto.Text = " "
+        CbxFila.Text = ""
+        CbxFila.Items.Clear()
+        CbxNumero.Text = ""
+        CbxNumero.Items.Clear()
+        CbxZona.Text = ""
+        CbxZona.Items.Clear()
+        Vendedor_Load(sender, e)
     End Sub
 
     Private Sub CbxNumero_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbxNumero.SelectedIndexChanged
@@ -239,5 +254,47 @@ Public Class Vendedor
         Else
             ComprarBoleto.Enabled = False
         End If
+    End Sub
+
+    Private Sub BtnRegresar_Click(sender As Object, e As EventArgs) Handles BtnRegresar.Click
+
+        Dim FolioIngresado As String
+        FolioIngresado = TbxFolioRegresar.Text
+        Dim validar As Boolean
+        Dim RevisarFolio As SqlCommand
+        Dim TodosFolios As SqlDataReader
+        validar = False
+        Dim EliminarBoleto As SqlCommand
+        Dim EliminarRecibo As SqlCommand
+
+        conexion.Open()
+        RevisarFolio = New SqlCommand("Select boleto.Folio_Compra FROM BOLETO inner join Recibo on recibo.Folio_compra=boleto.Folio_Compra", conexion)
+        TodosFolios = RevisarFolio.ExecuteReader
+        While TodosFolios.Read
+
+            If String.Equals(RTrim(FolioIngresado), RTrim(TodosFolios("Folio_Compra"))) Then
+                validar = True
+
+
+            End If
+
+        End While
+        TodosFolios.Close()
+
+        If validar = True Then
+            EliminarBoleto = New SqlCommand("Delete from Boleto where Boleto.Folio_compra='" + FolioIngresado + "'", conexion)
+            EliminarBoleto.ExecuteNonQuery()
+            EliminarRecibo = New SqlCommand("Delete from Recibo where Recibo.Folio_compra='" + FolioIngresado + "'", conexion)
+            EliminarRecibo.ExecuteNonQuery()
+
+            MessageBox.Show(FolioIngresado, "Eliminado")
+            TbxFolioRegresar.Text = ""
+        Else
+            MessageBox.Show("Folio Incorrecto")
+        End If
+
+
+        conexion.Close()
+
     End Sub
 End Class
