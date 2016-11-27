@@ -58,6 +58,7 @@ Partial Class Inicio
         '
         Me.tbxContraseña.Location = New System.Drawing.Point(38, 86)
         Me.tbxContraseña.Name = "tbxContraseña"
+        Me.tbxContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(87)
         Me.tbxContraseña.Size = New System.Drawing.Size(135, 20)
         Me.tbxContraseña.TabIndex = 3
         '

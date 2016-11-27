@@ -266,7 +266,7 @@ Public Class Vendedor
         validar = False
         Dim EliminarBoleto As SqlCommand
         Dim EliminarRecibo As SqlCommand
-
+        Dim eliminar As SqlCommand
         conexion.Open()
         RevisarFolio = New SqlCommand("Select boleto.Folio_Compra FROM BOLETO inner join Recibo on recibo.Folio_compra=boleto.Folio_Compra", conexion)
         TodosFolios = RevisarFolio.ExecuteReader
@@ -282,10 +282,33 @@ Public Class Vendedor
         TodosFolios.Close()
 
         If validar = True Then
-            EliminarBoleto = New SqlCommand("Delete from Boleto where Boleto.Folio_compra='" + FolioIngresado + "'", conexion)
-            EliminarBoleto.ExecuteNonQuery()
-            EliminarRecibo = New SqlCommand("Delete from Recibo where Recibo.Folio_compra='" + FolioIngresado + "'", conexion)
-            EliminarRecibo.ExecuteNonQuery()
+
+            eliminar = New SqlCommand("  
+DECLARE @foliocompra AS int;
+
+DECLARE Eliminar_Boleto CURSOR FOR SELECT dbo.Boleto.Folio_Compra FROM dbo.Boleto;
+OPEN Eliminar_Boleto
+FETCH Eliminar_Boleto INTO @foliocompra
+WHILE (@@fetch_status = 0)
+BEGIN
+	if (@foliocompra='" + FolioIngresado + "')/*1 representaria el id del concierto*/
+	BEGIN
+	Delete from Boleto where Boleto.Folio_compra=@foliocompra
+ Delete from Recibo where Recibo.Folio_compra=@foliocompra
+
+		END
+FETCH Eliminar_Boleto INTO @foliocompra
+END
+CLOSE Eliminar_Boleto;
+DEALLOCATE Eliminar_Boleto
+
+
+
+ ", conexion)
+
+            eliminar.ExecuteNonQuery()
+
+
 
             MessageBox.Show(FolioIngresado, "Eliminado")
             TbxFolioRegresar.Text = ""
