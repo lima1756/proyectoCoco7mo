@@ -72,7 +72,7 @@ Public Class Vendedor
         conexion.Open()
 
 
-        Zonas = New SqlCommand("select zona.ID_Zona from zona", conexion)
+        Zonas = New SqlCommand("select DISTINCT zona.ID_Zona from zona", conexion)
         datos = Zonas.ExecuteReader
         While datos.Read
             CbxZona.Items.Add(RTrim(datos("ID_Zona")))
@@ -117,7 +117,7 @@ Public Class Vendedor
         IDc.Close()
 
 
-        Dim cmd As String = "SELECT asiento.Fila, asiento.Numero, asiento.id_Asiento FROM asiento WHERE asiento.id_Asiento NOT IN (Select  asiento.id_Asiento FROM asiento, boleto  WHERE boleto.id_Asiento = asiento.id_Asiento And boleto.id_Concierto='" + idConcert + "') And id_Zona = '" + zonaSel + "'"
+        Dim cmd As String = "SELECT  asiento.Fila, asiento.Numero, asiento.id_Asiento FROM asiento WHERE asiento.id_Asiento NOT IN (Select  asiento.id_Asiento FROM asiento, boleto  WHERE boleto.id_Asiento = asiento.id_Asiento And boleto.id_Concierto='" + idConcert + "') And id_Zona = '" + zonaSel + "'"
         FilaYNumero = New SqlCommand(cmd, conexion)
 
 
@@ -283,28 +283,9 @@ Public Class Vendedor
 
         If validar = True Then
 
-            eliminar = New SqlCommand("  
-DECLARE @foliocompra AS int;
-
-DECLARE Eliminar_Boleto CURSOR FOR SELECT dbo.Boleto.Folio_Compra FROM dbo.Boleto;
-OPEN Eliminar_Boleto
-FETCH Eliminar_Boleto INTO @foliocompra
-WHILE (@@fetch_status = 0)
-BEGIN
-	if (@foliocompra='" + FolioIngresado + "')/*1 representaria el id del concierto*/
-	BEGIN
-	Delete from Boleto where Boleto.Folio_compra=@foliocompra
- Delete from Recibo where Recibo.Folio_compra=@foliocompra
-
-		END
-FETCH Eliminar_Boleto INTO @foliocompra
-END
-CLOSE Eliminar_Boleto;
-DEALLOCATE Eliminar_Boleto
+            eliminar = New SqlCommand("EXEC ProcedimientoEliminarBoleto  @foliocomprasel = '" + FolioIngresado + "'", conexion)
 
 
-
- ", conexion)
 
             eliminar.ExecuteNonQuery()
 
