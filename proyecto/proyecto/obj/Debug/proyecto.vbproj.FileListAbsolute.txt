@@ -28,3 +28,4 @@ C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Deb
 C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.Resources.resources
 C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.Vendedor.resources
 C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.vbproj.GenerateResource.Cache
+C:\Users\Samantha\Desktop\ProyectoCoco\proyectoCoco7mo\proyecto\proyecto\obj\Debug\proyecto.controlDeAcceso.resources

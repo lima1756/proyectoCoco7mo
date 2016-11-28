@@ -25,10 +25,10 @@ Public Class Inicio
         Dim contraCorr As String
         Dim validUs As Boolean
         Dim validC As Boolean
-        Dim trabajador As Boolean
+        Dim trabajador As Int16
         Dim Administrador As New Administrador
         Dim vendedor As New Vendedor
-
+        Dim controlDeAcceso As New controlDeAcceso
         conexion.Open()
         peticion = New SqlCommand("select * from Trabajador", conexion)
         datos = peticion.ExecuteReader
@@ -48,7 +48,7 @@ Public Class Inicio
 
                         validC = True
 
-                        trabajador = datos("admin")
+                        trabajador = datos("TipodeTrabajador")
                         idUsuario = datos("ID_Trabajador")
                     Else
 
@@ -73,12 +73,16 @@ Public Class Inicio
 
 
 
-                    If trabajador = True Then
+                    If trabajador = 1 Then
                         Administrador.Show()
                         Me.Finalize()
                     End If
-                    If trabajador = False Then
+                    If trabajador = 2 Then
                         vendedor.Show()
+                        Me.Finalize()
+                    End If
+                    If trabajador = 3 Then
+                        controlDeAcceso.Show()
                         Me.Finalize()
                     End If
                 End If

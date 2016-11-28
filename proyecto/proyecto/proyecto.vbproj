@@ -78,6 +78,12 @@
     <Compile Include="Administrador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="controlDeAcceso.Designer.vb">
+      <DependentUpon>controlDeAcceso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controlDeAcceso.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlDeAcceso.resx">
+      <DependentUpon>controlDeAcceso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>

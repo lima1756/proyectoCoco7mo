@@ -38,17 +38,17 @@ Partial Class Administrador
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.tbxNombre = New System.Windows.Forms.TextBox()
+        Me.tbxGenero = New System.Windows.Forms.TextBox()
+        Me.cbxConcierto = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker6 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker5Fin = New System.Windows.Forms.DateTimePicker()
+        Me.tbxArtista = New System.Windows.Forms.TextBox()
+        Me.DateTimePickerInicio = New System.Windows.Forms.DateTimePicker()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.DateTimePicker7 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker8 = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
@@ -76,6 +76,8 @@ Partial Class Administrador
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.tbxDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.TabControl3.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TabPage7.SuspendLayout()
@@ -230,17 +232,19 @@ Partial Class Administrador
         '
         'TabPage7
         '
+        Me.TabPage7.Controls.Add(Me.Label19)
+        Me.TabPage7.Controls.Add(Me.tbxDescripcion)
+        Me.TabPage7.Controls.Add(Me.Label18)
+        Me.TabPage7.Controls.Add(Me.tbxNombre)
+        Me.TabPage7.Controls.Add(Me.tbxGenero)
+        Me.TabPage7.Controls.Add(Me.cbxConcierto)
         Me.TabPage7.Controls.Add(Me.Label16)
-        Me.TabPage7.Controls.Add(Me.ListBox1)
         Me.TabPage7.Controls.Add(Me.Button4)
         Me.TabPage7.Controls.Add(Me.Label15)
-        Me.TabPage7.Controls.Add(Me.DateTimePicker5)
-        Me.TabPage7.Controls.Add(Me.TextBox8)
-        Me.TabPage7.Controls.Add(Me.DateTimePicker6)
+        Me.TabPage7.Controls.Add(Me.DateTimePicker5Fin)
+        Me.TabPage7.Controls.Add(Me.tbxArtista)
+        Me.TabPage7.Controls.Add(Me.DateTimePickerInicio)
         Me.TabPage7.Controls.Add(Me.Label14)
-        Me.TabPage7.Controls.Add(Me.DateTimePicker7)
-        Me.TabPage7.Controls.Add(Me.ComboBox3)
-        Me.TabPage7.Controls.Add(Me.DateTimePicker8)
         Me.TabPage7.Controls.Add(Me.Label13)
         Me.TabPage7.Controls.Add(Me.Label12)
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
@@ -250,6 +254,37 @@ Partial Class Administrador
         Me.TabPage7.Text = "Modificar Concierto"
         Me.TabPage7.UseVisualStyleBackColor = True
         '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(15, 117)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(82, 13)
+        Me.Label18.TabIndex = 30
+        Me.Label18.Text = "Nuevo Nombre:"
+        '
+        'tbxNombre
+        '
+        Me.tbxNombre.Location = New System.Drawing.Point(18, 136)
+        Me.tbxNombre.Name = "tbxNombre"
+        Me.tbxNombre.Size = New System.Drawing.Size(100, 20)
+        Me.tbxNombre.TabIndex = 29
+        '
+        'tbxGenero
+        '
+        Me.tbxGenero.Location = New System.Drawing.Point(18, 216)
+        Me.tbxGenero.Name = "tbxGenero"
+        Me.tbxGenero.Size = New System.Drawing.Size(100, 20)
+        Me.tbxGenero.TabIndex = 28
+        '
+        'cbxConcierto
+        '
+        Me.cbxConcierto.FormattingEnabled = True
+        Me.cbxConcierto.Location = New System.Drawing.Point(18, 28)
+        Me.cbxConcierto.Name = "cbxConcierto"
+        Me.cbxConcierto.Size = New System.Drawing.Size(121, 21)
+        Me.cbxConcierto.TabIndex = 27
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -258,14 +293,6 @@ Partial Class Administrador
         Me.Label16.Size = New System.Drawing.Size(58, 13)
         Me.Label16.TabIndex = 26
         Me.Label16.Text = "Concierto: "
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(18, 28)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(200, 69)
-        Me.ListBox1.TabIndex = 25
         '
         'Button4
         '
@@ -279,70 +306,49 @@ Partial Class Administrador
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(15, 104)
+        Me.Label15.Location = New System.Drawing.Point(15, 159)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(42, 13)
         Me.Label15.TabIndex = 15
         Me.Label15.Text = "Artista: "
         '
-        'DateTimePicker5
+        'DateTimePicker5Fin
         '
-        Me.DateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker5.Location = New System.Drawing.Point(18, 296)
-        Me.DateTimePicker5.Name = "DateTimePicker5"
-        Me.DateTimePicker5.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker5.TabIndex = 23
+        Me.DateTimePicker5Fin.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePicker5Fin.Location = New System.Drawing.Point(18, 294)
+        Me.DateTimePicker5Fin.Name = "DateTimePicker5Fin"
+        Me.DateTimePicker5Fin.Size = New System.Drawing.Size(216, 20)
+        Me.DateTimePicker5Fin.TabIndex = 23
         '
-        'TextBox8
+        'tbxArtista
         '
-        Me.TextBox8.Location = New System.Drawing.Point(18, 120)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 14
+        Me.tbxArtista.Location = New System.Drawing.Point(18, 175)
+        Me.tbxArtista.Name = "tbxArtista"
+        Me.tbxArtista.Size = New System.Drawing.Size(100, 20)
+        Me.tbxArtista.TabIndex = 14
         '
-        'DateTimePicker6
+        'DateTimePickerInicio
         '
-        Me.DateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker6.Location = New System.Drawing.Point(18, 231)
-        Me.DateTimePicker6.Name = "DateTimePicker6"
-        Me.DateTimePicker6.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker6.TabIndex = 22
+        Me.DateTimePickerInicio.CustomFormat = ""
+        Me.DateTimePickerInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePickerInicio.Location = New System.Drawing.Point(18, 255)
+        Me.DateTimePickerInicio.Name = "DateTimePickerInicio"
+        Me.DateTimePickerInicio.Size = New System.Drawing.Size(213, 20)
+        Me.DateTimePickerInicio.TabIndex = 22
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(15, 146)
+        Me.Label14.Location = New System.Drawing.Point(15, 198)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(48, 13)
         Me.Label14.TabIndex = 16
         Me.Label14.Text = "Genero: "
         '
-        'DateTimePicker7
-        '
-        Me.DateTimePicker7.Location = New System.Drawing.Point(18, 270)
-        Me.DateTimePicker7.Name = "DateTimePicker7"
-        Me.DateTimePicker7.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker7.TabIndex = 21
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(18, 166)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 17
-        '
-        'DateTimePicker8
-        '
-        Me.DateTimePicker8.Location = New System.Drawing.Point(18, 205)
-        Me.DateTimePicker8.Name = "DateTimePicker8"
-        Me.DateTimePicker8.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker8.TabIndex = 20
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(15, 189)
+        Me.Label13.Location = New System.Drawing.Point(15, 239)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(111, 13)
         Me.Label13.TabIndex = 18
@@ -351,7 +357,7 @@ Partial Class Administrador
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(15, 254)
+        Me.Label12.Location = New System.Drawing.Point(15, 278)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(98, 13)
         Me.Label12.TabIndex = 19
@@ -596,6 +602,22 @@ Partial Class Administrador
         Me.Button2.Text = "Regresar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'tbxDescripcion
+        '
+        Me.tbxDescripcion.Location = New System.Drawing.Point(18, 84)
+        Me.tbxDescripcion.Name = "tbxDescripcion"
+        Me.tbxDescripcion.Size = New System.Drawing.Size(216, 20)
+        Me.tbxDescripcion.TabIndex = 31
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(15, 68)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(63, 13)
+        Me.Label19.TabIndex = 32
+        Me.Label19.Text = "Descripcion"
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -661,19 +683,22 @@ Partial Class Administrador
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents Label16 As Label
-    Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Label15 As Label
-    Friend WithEvents DateTimePicker5 As DateTimePicker
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents DateTimePicker6 As DateTimePicker
+    Friend WithEvents DateTimePicker5Fin As DateTimePicker
+    Friend WithEvents tbxArtista As TextBox
+    Friend WithEvents DateTimePickerInicio As DateTimePicker
     Friend WithEvents Label14 As Label
-    Friend WithEvents DateTimePicker7 As DateTimePicker
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents DateTimePicker8 As DateTimePicker
+    Friend WithEvents DateTimePickerFin As DateTimePicker
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents ListBox2 As ListBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents cbxConcierto As ComboBox
+    Friend WithEvents tbxGenero As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents tbxNombre As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents tbxDescripcion As TextBox
 End Class
