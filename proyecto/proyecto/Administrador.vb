@@ -21,14 +21,18 @@ Public Class Administrador
 
         DateTimePickerInicio.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
         DateTimePicker5Fin.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
+        DateTimePicker4Fi.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
+        DateTimePickerIni.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
         DateTimePicker5Fin.Format = DateTimePickerFormat.Custom
         DateTimePickerInicio.Format = DateTimePickerFormat.Custom
+        DateTimePicker4Fi.Format = DateTimePickerFormat.Custom
+        DateTimePickerIni.Format = DateTimePickerFormat.Custom
         conexion.Open()
         miPeticion = New SqlCommand("SELECT Nombre FROM Concierto", conexion)
         data = miPeticion.ExecuteReader
         While data.Read
             cbxConcierto.Items.Add(RTrim(data("Nombre")))
-
+            cbxEliminarC.Items.Add(RTrim(data("Nombre")))
         End While
         conexion.Close()
 
@@ -84,26 +88,77 @@ Public Class Administrador
         nombre = tbxNombre.Text
         artista = tbxArtista.Text
         genero = tbxGenero.Text
-        fechaI = DateTimePickerInicio.Value.ToString("yyyy/MM/dd hh:mm:ss tt")
+        fechaI = DateTimePickerInicio.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
+        fechaF = DateTimePicker5Fin.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
         MessageBox.Show(fechaI)
-        fechaF = DateTimePicker5Fin.Value.ToString("yyyy/MM/dd hh:mm:ss tt")
-        MessageBox.Show(fechaF)
         descripcion = tbxDescripcion.Text
-        'no se puede modificar en la bdd porque en el string entrega un p.m. , solo es cuestion de quitarle los puntos '
-        DateTimePicker5Fin.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
+        DateTimePicker5Fin.CustomFormat = "yyyy-MM-dd hh:mm:ss tt"
         DateTimePicker5Fin.Format = DateTimePickerFormat.Custom
+        Dim x As String() = fechaF.Split(".")
+        fechaF = ""
+        For Each y As String In x
+            fechaF = fechaF + y
+
+        Next
+
+        Dim xx As String() = fechaI.Split(".")
+        fechaI = ""
+        For Each yy As String In xx
+            fechaI = fechaI + yy
+
+        Next
 
 
-
-
-
-        '     Dim modificar As SqlCommand
-        '    conexion.Open()
-        '   modificar = New SqlCommand("EXEC Modificar  @Nombre = '" + nombre + "',@Artista = '" + artista + "' ,@Género = '" + genero + "' ,@Descripción = '" + descripcion + "',@ID_Concierto = '" + idConciertoG + "',@Dia_Hora_Inicio'" + fechaI + "',@Dia_Hora_Fin'" + fechaI + "'", conexion)
-        '  modificar.ExecuteNonQuery()
+        Dim modificar As SqlCommand
+        conexion.Open()
+        modificar = New SqlCommand("EXEC Modificar  @Nombre = '" + nombre + "',@Artista = '" + artista + "' ,@Género = '" + genero + "' ,@Descripción = '" + descripcion + "',@ID_Concierto = '" + idConciertoG + "',@Dia_Hora_Inicio='" + fechaI + "',@Dia_Hora_Fin='" + fechaI + "'", conexion)
+        modificar.ExecuteNonQuery()
 
         conexion.Close()
     End Sub
 
 
+
+    Private Sub btnAgregar_Click_1(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Dim Nombre As String
+        Dim Artista As String
+        Dim Genero As String
+        Dim Descripcion As String
+        Dim fechaIA As String
+        Dim fechaFA As String
+        Nombre = tbxN.Text
+        Artista = tbxAr.Text
+        Genero = tbxGe.Text
+        Descripcion = tbxDes.Text
+        fechaIA = DateTimePickerIni.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
+        fechaFA = DateTimePicker4Fi.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
+        Dim x As String() = fechaFA.Split(".")
+        fechaFA = ""
+        For Each y As String In x
+            fechaFA = fechaFA + y
+
+        Next
+
+        Dim xx As String() = fechaIA.Split(".")
+        fechaIA = ""
+        For Each yy As String In xx
+            fechaIA = fechaIA + yy
+
+        Next
+
+
+        MessageBox.Show("holi")
+        Dim agregar As SqlCommand
+        conexion.Open()
+        agregar = New SqlCommand("EXEC Agregar  @Nombre = '" + Nombre + "',@Artista = '" + Artista + "' ,@Género = '" + Genero + "' ,@Descripción = '" + Descripcion + "',@Dia_Hora_Inicio='" + fechaIA + "',@Dia_Hora_Fin='" + fechaIA + "'", conexion)
+        agregar.ExecuteNonQuery()
+
+        MessageBox.Show("agregado")
+        conexion.Close()
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+    End Sub
 End Class
