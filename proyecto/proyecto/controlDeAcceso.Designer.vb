@@ -22,19 +22,20 @@ Partial Class controlDeAcceso
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxZona = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtFolio = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnRevisar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cbxZona
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 46)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cbxZona.FormattingEnabled = True
+        Me.cbxZona.Location = New System.Drawing.Point(12, 46)
+        Me.cbxZona.Name = "cbxZona"
+        Me.cbxZona.Size = New System.Drawing.Size(121, 21)
+        Me.cbxZona.TabIndex = 0
         '
         'Label1
         '
@@ -45,12 +46,12 @@ Partial Class controlDeAcceso
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Seleccione su zona:"
         '
-        'TextBox1
+        'txtFolio
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 161)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.txtFolio.Location = New System.Drawing.Point(12, 161)
+        Me.txtFolio.Name = "txtFolio"
+        Me.txtFolio.Size = New System.Drawing.Size(121, 20)
+        Me.txtFolio.TabIndex = 2
         '
         'Label2
         '
@@ -61,15 +62,25 @@ Partial Class controlDeAcceso
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Folio:"
         '
+        'btnRevisar
+        '
+        Me.btnRevisar.Location = New System.Drawing.Point(178, 226)
+        Me.btnRevisar.Name = "btnRevisar"
+        Me.btnRevisar.Size = New System.Drawing.Size(75, 23)
+        Me.btnRevisar.TabIndex = 4
+        Me.btnRevisar.Text = "Revisar"
+        Me.btnRevisar.UseVisualStyleBackColor = True
+        '
         'controlDeAcceso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.btnRevisar)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtFolio)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbxZona)
         Me.Name = "controlDeAcceso"
         Me.Text = "controlDeAcceso"
         Me.ResumeLayout(False)
@@ -77,8 +88,9 @@ Partial Class controlDeAcceso
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxZona As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtFolio As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnRevisar As Button
 End Class
