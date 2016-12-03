@@ -5,10 +5,11 @@ Public Class Administrador
 
 
     Public Sub New()
-
+        Dim cad As String = Conectar.TextBox1.Text
         ' This call is required by the designer.
         InitializeComponent()
-        conexion = New SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=prograAplicada;Data Source=SAMANTHA")
+
+        conexion = New SqlConnection(cad)
 
 
         ' Add any initialization after the InitializeComponent() call.

@@ -78,6 +78,12 @@
     <Compile Include="Administrador.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Conectar.Designer.vb">
+      <DependentUpon>Conectar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Conectar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="controlDeAcceso.Designer.vb">
       <DependentUpon>controlDeAcceso.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,9 @@
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Conectar.resx">
+      <DependentUpon>Conectar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controlDeAcceso.resx">
       <DependentUpon>controlDeAcceso.vb</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +143,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\proyecto.exe.config" />
+    <None Include="bin\Debug\proyecto.vshost.exe.config" />
+    <None Include="bin\Debug\proyecto.vshost.exe.manifest" />
     <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -145,6 +157,13 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\conexion.xml" />
+    <Content Include="bin\Debug\proyecto.exe" />
+    <Content Include="bin\Debug\proyecto.pdb" />
+    <Content Include="bin\Debug\proyecto.vshost.exe" />
+    <Content Include="bin\Debug\proyecto.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

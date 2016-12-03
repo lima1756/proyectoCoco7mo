@@ -3,19 +3,24 @@
 Public Class Inicio
     Private conexion As SqlConnection
     Public idUsuario As String
-    Public Sub New()
+    Public err As Boolean = False
+    Dim Cnt As New DataSet("Conexion")
 
+    Public Sub New()
+        Dim cad As String = Conectar.TextBox1.Text
         ' This call is required by the designer.
         InitializeComponent()
-        conexion = New SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=prograAplicada;Data Source=SAMANTHA")
-
+        Try
+            conexion = New SqlConnection(cad)
+        Catch ex As Exception
+            err = True
+            MessageBox.Show("Error")
+        End Try
 
         ' Add any initialization after the InitializeComponent() call.
         Dim Vendedor As New Vendedor()
 
     End Sub
-
-
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
         Dim peticion As SqlCommand
         Dim datos As SqlDataReader
@@ -95,6 +100,16 @@ Public Class Inicio
         conexion.Close()
 
 
+
+    End Sub
+
+    Private Sub Inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If err = True Then
+            Conectar.Show()
+
+        Else
+
+        End If
 
     End Sub
 
