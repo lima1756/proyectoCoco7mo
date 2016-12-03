@@ -108,7 +108,7 @@ Public Class Inicio
     Private Sub Inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If err = True Then
             Conectar.Show()
-            Me.Close()
+
         Else
 
         End If
