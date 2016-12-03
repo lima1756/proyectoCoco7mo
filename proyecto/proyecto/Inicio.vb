@@ -108,7 +108,7 @@ Public Class Inicio
             Conectar.Show()
 
         Else
-
+            Conectar.Close()
         End If
 
     End Sub
