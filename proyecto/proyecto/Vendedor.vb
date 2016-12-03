@@ -3,6 +3,8 @@ Public Class Vendedor
     Private conexion As SqlConnection
     Private idConciertoG As String
 
+    'LINQ' 
+    Private db As New LinQDataContext()
 
     Public Sub New()
         Dim cad As String = Conectar.TextBox1.Text
@@ -212,13 +214,16 @@ Public Class Vendedor
         InsertarRecibo.ExecuteNonQuery()
 
 
-        FolioCompraSQL = New SqlCommand("select max(recibo.Folio_compra) as UltFolio from Recibo", conexion)
-        data2 = FolioCompraSQL.ExecuteReader
-        While data2.Read
-            FolioCompra = data2(RTrim("UltFolio"))
-        End While
 
         data2.Close()
+
+        'LINQ'
+        Dim var = From ultimorec In db.Recibos Order By ultimorec.Folio_compra Descending Select ultimorec.Folio_compra Take (1)
+
+        For Each ultimorec In var
+
+            FolioCompra = ultimorec.ToString
+        Next
 
 
         IDAsientosql = New SqlCommand(" Select asiento.ID_Asiento from Asiento where asiento.ID_Zona='" + zonaSel + "' and asiento.Numero='" + numerosel + "' and asiento.Fila='" + FilaSel + "'", conexion)

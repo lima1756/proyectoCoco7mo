@@ -14,6 +14,8 @@ Public Class Conectar
         Try
             conexion = New SqlConnection(intento)
             conexion.Open()
+            Me.Finalize()
+            Inicio.Show()
 
         Catch ex As Exception
             err = True
