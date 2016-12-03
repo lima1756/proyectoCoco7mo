@@ -4,7 +4,6 @@ Public Class Inicio
     Private conexion As SqlConnection
     Public idUsuario As String
     Public err As Boolean = False
-    Dim Cnt As New DataSet("Conexion")
 
     Public Sub New()
         Dim cad As String = Conectar.TextBox1.Text
@@ -18,7 +17,10 @@ Public Class Inicio
         End Try
 
         ' Add any initialization after the InitializeComponent() call.
-        Dim Vendedor As New Vendedor()
+        If err = False Then
+            Dim Vendedor As New Vendedor()
+        End If
+
 
     End Sub
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
@@ -106,7 +108,7 @@ Public Class Inicio
     Private Sub Inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If err = True Then
             Conectar.Show()
-
+            Me.Close()
         Else
 
         End If
