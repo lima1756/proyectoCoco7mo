@@ -59,11 +59,30 @@ Partial Class Administrador
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.AgrUs = New System.Windows.Forms.Button()
+        Me.EdU = New System.Windows.Forms.TextBox()
+        Me.NomU = New System.Windows.Forms.TextBox()
+        Me.Con = New System.Windows.Forms.TextBox()
+        Me.EmailU = New System.Windows.Forms.TextBox()
+        Me.ApU = New System.Windows.Forms.TextBox()
+        Me.Usuario = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Vendedor = New System.Windows.Forms.RadioButton()
+        Me.Admin = New System.Windows.Forms.RadioButton()
+        Me.Ctrl_Acceso = New System.Windows.Forms.RadioButton()
         Me.TabControl3.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TabPage7.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.TabPage6.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl3
@@ -72,6 +91,7 @@ Partial Class Administrador
         Me.TabControl3.Controls.Add(Me.TabPage7)
         Me.TabControl3.Controls.Add(Me.TabPage8)
         Me.TabControl3.Controls.Add(Me.TabPage6)
+        Me.TabControl3.Controls.Add(Me.TabPage1)
         Me.TabControl3.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl3.Location = New System.Drawing.Point(3, 15)
         Me.TabControl3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -447,6 +467,188 @@ Partial Class Administrador
         Me.Button1.Text = "Vender"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.Turquoise
+        Me.TabPage1.Controls.Add(Me.Ctrl_Acceso)
+        Me.TabPage1.Controls.Add(Me.Admin)
+        Me.TabPage1.Controls.Add(Me.Vendedor)
+        Me.TabPage1.Controls.Add(Me.Label21)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.Usuario)
+        Me.TabPage1.Controls.Add(Me.ApU)
+        Me.TabPage1.Controls.Add(Me.EmailU)
+        Me.TabPage1.Controls.Add(Me.Con)
+        Me.TabPage1.Controls.Add(Me.NomU)
+        Me.TabPage1.Controls.Add(Me.EdU)
+        Me.TabPage1.Controls.Add(Me.AgrUs)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 27)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(434, 419)
+        Me.TabPage1.TabIndex = 4
+        Me.TabPage1.Text = "Agregar Usuario"
+        '
+        'AgrUs
+        '
+        Me.AgrUs.BackColor = System.Drawing.Color.RoyalBlue
+        Me.AgrUs.Location = New System.Drawing.Point(269, 354)
+        Me.AgrUs.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgrUs.Name = "AgrUs"
+        Me.AgrUs.Size = New System.Drawing.Size(87, 28)
+        Me.AgrUs.TabIndex = 32
+        Me.AgrUs.Text = "Agregar"
+        Me.AgrUs.UseVisualStyleBackColor = False
+        '
+        'EdU
+        '
+        Me.EdU.Location = New System.Drawing.Point(36, 230)
+        Me.EdU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.EdU.Name = "EdU"
+        Me.EdU.Size = New System.Drawing.Size(251, 25)
+        Me.EdU.TabIndex = 33
+        '
+        'NomU
+        '
+        Me.NomU.Location = New System.Drawing.Point(36, 128)
+        Me.NomU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.NomU.Name = "NomU"
+        Me.NomU.Size = New System.Drawing.Size(251, 25)
+        Me.NomU.TabIndex = 34
+        '
+        'Con
+        '
+        Me.Con.Location = New System.Drawing.Point(36, 77)
+        Me.Con.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Con.Name = "Con"
+        Me.Con.Size = New System.Drawing.Size(251, 25)
+        Me.Con.TabIndex = 35
+        '
+        'EmailU
+        '
+        Me.EmailU.Location = New System.Drawing.Point(36, 281)
+        Me.EmailU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.EmailU.Name = "EmailU"
+        Me.EmailU.Size = New System.Drawing.Size(251, 25)
+        Me.EmailU.TabIndex = 36
+        '
+        'ApU
+        '
+        Me.ApU.Location = New System.Drawing.Point(36, 179)
+        Me.ApU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ApU.Name = "ApU"
+        Me.ApU.Size = New System.Drawing.Size(251, 25)
+        Me.ApU.TabIndex = 37
+        '
+        'Usuario
+        '
+        Me.Usuario.Location = New System.Drawing.Point(36, 26)
+        Me.Usuario.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Usuario.Name = "Usuario"
+        Me.Usuario.Size = New System.Drawing.Size(251, 25)
+        Me.Usuario.TabIndex = 38
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(33, 4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(60, 18)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "Usuario:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(33, 259)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 18)
+        Me.Label2.TabIndex = 40
+        Me.Label2.Text = "Email:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(33, 157)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 18)
+        Me.Label3.TabIndex = 41
+        Me.Label3.Text = "Apellido:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(33, 208)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(43, 18)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "Edad:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(33, 106)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 18)
+        Me.Label5.TabIndex = 43
+        Me.Label5.Text = "Nombre:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(33, 55)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(81, 18)
+        Me.Label6.TabIndex = 44
+        Me.Label6.Text = "Contraseña:"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(33, 310)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(108, 18)
+        Me.Label21.TabIndex = 45
+        Me.Label21.Text = "Tipo de usuario:"
+        '
+        'Vendedor
+        '
+        Me.Vendedor.AutoSize = True
+        Me.Vendedor.Checked = True
+        Me.Vendedor.Location = New System.Drawing.Point(36, 359)
+        Me.Vendedor.Name = "Vendedor"
+        Me.Vendedor.Size = New System.Drawing.Size(86, 22)
+        Me.Vendedor.TabIndex = 49
+        Me.Vendedor.TabStop = True
+        Me.Vendedor.Text = "Vendedor"
+        Me.Vendedor.UseVisualStyleBackColor = True
+        '
+        'Admin
+        '
+        Me.Admin.AutoSize = True
+        Me.Admin.Location = New System.Drawing.Point(36, 331)
+        Me.Admin.Name = "Admin"
+        Me.Admin.Size = New System.Drawing.Size(115, 22)
+        Me.Admin.TabIndex = 50
+        Me.Admin.Text = "Administrador"
+        Me.Admin.UseVisualStyleBackColor = True
+        '
+        'Ctrl_Acceso
+        '
+        Me.Ctrl_Acceso.AutoSize = True
+        Me.Ctrl_Acceso.Location = New System.Drawing.Point(36, 387)
+        Me.Ctrl_Acceso.Name = "Ctrl_Acceso"
+        Me.Ctrl_Acceso.Size = New System.Drawing.Size(133, 22)
+        Me.Ctrl_Acceso.TabIndex = 51
+        Me.Ctrl_Acceso.TabStop = True
+        Me.Ctrl_Acceso.Text = "Control de acceso"
+        Me.Ctrl_Acceso.UseVisualStyleBackColor = True
+        '
         'Administrador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -467,6 +669,8 @@ Partial Class Administrador
         Me.TabPage8.ResumeLayout(False)
         Me.TabPage8.PerformLayout()
         Me.TabPage6.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -509,4 +713,22 @@ Partial Class Administrador
     Friend WithEvents Label20 As Label
     Friend WithEvents tbxGe As TextBox
     Friend WithEvents cbxEliminarC As ComboBox
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Usuario As TextBox
+    Friend WithEvents ApU As TextBox
+    Friend WithEvents EmailU As TextBox
+    Friend WithEvents Con As TextBox
+    Friend WithEvents NomU As TextBox
+    Friend WithEvents EdU As TextBox
+    Friend WithEvents AgrUs As Button
+    Friend WithEvents Vendedor As RadioButton
+    Friend WithEvents Ctrl_Acceso As RadioButton
+    Friend WithEvents Admin As RadioButton
 End Class

@@ -248,6 +248,48 @@ Public Class Administrador
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Vendedor.Show()
     End Sub
+
+    Private Sub AgrUs_Click(sender As Object, e As EventArgs) Handles AgrUs.Click
+        Dim us As String
+        Dim contraseña As String
+        Dim nombre As String
+        Dim apellido As String
+        Dim edad As String
+        Dim email As String
+        Dim tipo As String
+
+        If Usuario.Text = "" Or Con.Text = "" Or NomU.Text = "" Or ApU.Text = "" Or EdU.Text = "" Or EmailU.Text = "" Then
+            MessageBox.Show("Falta llenar uno o más campos")
+        ElseIf IsNumeric(EdU.Text) = False Then
+            MessageBox.Show("Edad debe ser un numero")
+        Else
+            us = Usuario.Text
+            contraseña = Con.Text
+            nombre = NomU.Text
+            apellido = ApU.Text
+            edad = EdU.Text
+            email = EmailU.Text
+            If Admin.Checked Then
+                tipo = "1"
+            ElseIf Vendedor.Checked Then
+                tipo = "2"
+            ElseIf Ctrl_Acceso.Checked Then
+                tipo = "3"
+            End If
+            conexion.Open()
+            Dim mipeticion As SqlCommand
+            mipeticion = New SqlCommand("Insert Into Trabajador (Usuario, Contraseña, Nombre, Apellido, Edad, email, TipodeTrabajador) Values ('" + us + "','" + contraseña + "','" + nombre + "','" + apellido + "'," + edad + ",'" + email + "'," + tipo + ")", conexion)
+            mipeticion.ExecuteNonQuery()
+            MessageBox.Show("Usuario registrado")
+            Usuario.Clear()
+            Con.Clear()
+            NomU.Clear()
+            ApU.Clear()
+            EdU.Clear()
+            EmailU.Clear()
+            conexion.Close()
+        End If
+    End Sub
 End Class
 
 
