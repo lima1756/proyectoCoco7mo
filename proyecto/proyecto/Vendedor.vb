@@ -48,7 +48,7 @@ Public Class Vendedor
 
         ComprarBoleto.Enabled = False
 
-
+        conexion.Close()
         conexion.Open()
         miPeticion = New SqlCommand("SELECT Nombre FROM Concierto", conexion)
         data = miPeticion.ExecuteReader
