@@ -78,8 +78,6 @@ Public Class Inicio
                     MessageBox.Show("contraseña Incorrecta")
                 ElseIf validC = True Then
 
-
-
                     If trabajador = 1 Then
                         Administrador.Show()
                         Me.Finalize()
@@ -115,5 +113,15 @@ Public Class Inicio
 
     End Sub
 
+    Private Sub tbxUsuario_KeyDown(sender As Object, e As KeyEventArgs) Handles tbxUsuario.KeyDown
+        If e.KeyCode = 13 Then
+            btnIniciar.PerformClick()
+        End If
+    End Sub
 
+    Private Sub tbxContraseña_KeyDown(sender As Object, e As KeyEventArgs) Handles tbxContraseña.KeyDown
+        If e.KeyCode = 13 Then
+            btnIniciar.PerformClick()
+        End If
+    End Sub
 End Class
