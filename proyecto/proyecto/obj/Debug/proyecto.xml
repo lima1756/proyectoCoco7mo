@@ -22,5 +22,20 @@ proyecto
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:proyecto.My.Resources.Resources.itextsharp">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:proyecto.My.Resources.Resources.itextsharp_pdfa">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:proyecto.My.Resources.Resources.itextsharp_xtra">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
 </members>
 </doc>

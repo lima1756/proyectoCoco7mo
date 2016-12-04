@@ -1,8 +1,16 @@
 ﻿Imports System.Data.SqlClient
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text
+Imports System.IO
+
+
 Public Class Vendedor
     Private conexion As SqlConnection
     Private idConciertoG As String
 
+    Dim nombreConcert As String
+    Dim fecha As String
+    Dim precio2 As String
     'LINQ' 
     Private db As New LinQDataContext()
 
@@ -207,6 +215,7 @@ Public Class Vendedor
         While data2.Read
             Precio = data2(RTrim("precio"))
         End While
+        precio2 = Precio
         data2.Close()
 
 
@@ -239,10 +248,39 @@ Public Class Vendedor
         InsertarBoleto.ExecuteNonQuery()
 
         MessageBox.Show(FolioCompra, "Vendido")
+        nombreConcert = ComboBoxConcierto.SelectedItem
+        Dim msg As String
+        Dim title As String
+        Dim style As MsgBoxStyle
+        Dim response As MsgBoxResult
+        msg = "Desea imprimir el recibo?"   ' Define message.
+        style = MsgBoxStyle.YesNo
+        title = "Generar PDF"   ' Define title.
+        ' Display message.
+        response = MsgBox(msg, style, title)
+        If response = MsgBoxResult.Yes Then   ' User chose Yes.
+            ' Perform some action.
+            Dim pdfDoc As New Document()
+            Dim pdfWrite As PdfWriter = PdfWriter.GetInstance(pdfDoc, New FileStream(FolioCompra + ".pdf", FileMode.Create))
+            pdfDoc.Open()
+            pdfDoc.Add(New Paragraph("***** Boleto comprado *****"))
+            pdfDoc.Add(New Paragraph("Folio: " + FolioCompra))
+            pdfDoc.Add(New Paragraph("Concierto: " + nombreConcert))
+            pdfDoc.Add(New Paragraph("Costo: " + precio2))
+            pdfDoc.Add(New Paragraph("Zona: " + zonaSel))
+            pdfDoc.Add(New Paragraph("Fila: " + FilaSel))
+            pdfDoc.Add(New Paragraph("Asiento: " + IDASIENTO))
+            pdfDoc.Add(New Paragraph("Fecha de compra: " + System.DateTime.Today))
+            pdfDoc.Add(New Paragraph("Gracias por comprar con nosotros :) "))
+            pdfDoc.Add(New Paragraph("*****     KONCERT     *****"))
+            pdfDoc.Close()
+            Process.Start(FolioCompra + ".pdf")
+
+        Else
+            ' Perform some other action.
+        End If
 
 
-
-        conexion.Close()
 
         ComboBoxConcierto.Text = " "
         CbxFila.Text = ""

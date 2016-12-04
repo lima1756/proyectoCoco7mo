@@ -40,7 +40,7 @@ Partial Public Class LinQDataContext
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.proyecto.My.MySettings.Default.prograAplicadaConnectionString, mappingSource)
+		MyBase.New(Global.proyecto.My.MySettings.Default.prograAplicadaConnectionString1, mappingSource)
 		OnCreated
 	End Sub
 	

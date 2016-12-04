@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="prograAplicada" Class="LinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=SAMANTHA;Initial Catalog=prograAplicada;Integrated Security=True" SettingsObjectName="proyecto.My.MySettings" SettingsPropertyName="prograAplicadaConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-7I4ENCA\SQLEXPRESS;Initial Catalog=prograAplicada;Integrated Security=True" SettingsObjectName="proyecto.My.MySettings" SettingsPropertyName="prograAplicadaConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Recibo" Member="Recibos">
     <Type Name="Recibo">
       <Column Name="Folio_compra" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

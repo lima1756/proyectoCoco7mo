@@ -47,6 +47,18 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
@@ -150,17 +162,18 @@
     <EmbeddedResource Include="Vendedor.resx">
       <DependentUpon>Vendedor.vb</DependentUpon>
     </EmbeddedResource>
+    <None Include="LinQ.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>LinQ.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\itextsharp-all-5.5.10.zip" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\proyecto.exe.config" />
     <None Include="bin\Debug\proyecto.vshost.exe.config" />
     <None Include="bin\Debug\proyecto.vshost.exe.manifest" />
     <None Include="ClassDiagram1.cd" />
-    <None Include="LinQ.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LinQ.designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -178,6 +191,9 @@
     <Content Include="bin\Debug\proyecto.pdb" />
     <Content Include="bin\Debug\proyecto.vshost.exe" />
     <Content Include="bin\Debug\proyecto.xml" />
+    <None Include="itextsharp.xtra.dll" />
+    <None Include="itextsharp.pdfa.dll" />
+    <None Include="itextsharp.dll" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
