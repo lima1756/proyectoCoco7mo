@@ -58,6 +58,7 @@ Partial Class Vendedor
         '
         'TabPage1
         '
+        Me.TabPage1.BackColor = System.Drawing.Color.Turquoise
         Me.TabPage1.Controls.Add(Me.CbxNumero)
         Me.TabPage1.Controls.Add(Me.CbxFila)
         Me.TabPage1.Controls.Add(Me.CbxZona)
@@ -74,7 +75,6 @@ Partial Class Vendedor
         Me.TabPage1.Size = New System.Drawing.Size(264, 219)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Venta"
-        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'CbxNumero
         '
@@ -102,12 +102,13 @@ Partial Class Vendedor
         '
         'ComprarBoleto
         '
+        Me.ComprarBoleto.BackColor = System.Drawing.Color.RoyalBlue
         Me.ComprarBoleto.Location = New System.Drawing.Point(180, 175)
         Me.ComprarBoleto.Name = "ComprarBoleto"
         Me.ComprarBoleto.Size = New System.Drawing.Size(75, 36)
         Me.ComprarBoleto.TabIndex = 11
         Me.ComprarBoleto.Text = "Comprar Boleto"
-        Me.ComprarBoleto.UseVisualStyleBackColor = True
+        Me.ComprarBoleto.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -185,6 +186,7 @@ Partial Class Vendedor
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.Turquoise
         Me.TabPage2.Controls.Add(Me.Label6)
         Me.TabPage2.Controls.Add(Me.TbxFolioRegresar)
         Me.TabPage2.Controls.Add(Me.BtnRegresar)
@@ -194,7 +196,6 @@ Partial Class Vendedor
         Me.TabPage2.Size = New System.Drawing.Size(264, 219)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Regreso"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Label6
         '

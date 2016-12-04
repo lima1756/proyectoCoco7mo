@@ -22,6 +22,7 @@ Partial Class Conectar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Conectar))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -35,22 +36,25 @@ Partial Class Conectar
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.RoyalBlue
         Me.Button1.Location = New System.Drawing.Point(114, 38)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Continuar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Conectar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Turquoise
         Me.ClientSize = New System.Drawing.Size(284, 68)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Conectar"
-        Me.Text = "Conectar"
+        Me.Text = "Conectar Koncert"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
