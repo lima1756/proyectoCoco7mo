@@ -91,7 +91,7 @@ Public Class Administrador
         genero = tbxGenero.Text
         fechaI = DateTimePickerInicio.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
         fechaF = DateTimePicker5Fin.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
-        MessageBox.Show(fechaI)
+
         descripcion = tbxDescripcion.Text
         DateTimePicker5Fin.CustomFormat = "yyyy-MM-dd hh:mm:ss tt"
         DateTimePicker5Fin.Format = DateTimePickerFormat.Custom
@@ -109,13 +109,19 @@ Public Class Administrador
 
         Next
 
+        If tbxNombre.Text = "" Or tbxArtista.Text = "" Or tbxGenero.Text = "" Or tbxDescripcion.Text = "" Then
 
-        Dim modificar As SqlCommand
-        conexion.Open()
-        modificar = New SqlCommand("EXEC Modificar  @Nombre = '" + nombre + "',@Artista = '" + artista + "' ,@Género = '" + genero + "' ,@Descripción = '" + descripcion + "',@ID_Concierto = '" + idConciertoG + "',@Dia_Hora_Inicio='" + fechaI + "',@Dia_Hora_Fin='" + fechaI + "'", conexion)
-        modificar.ExecuteNonQuery()
+            MessageBox.Show("Faltan uno o varios campos por llenar")
 
-        conexion.Close()
+        Else
+
+            Dim modificar As SqlCommand
+            conexion.Open()
+            modificar = New SqlCommand("EXEC Modificar  @Nombre = '" + nombre + "',@Artista = '" + artista + "' ,@Género = '" + genero + "' ,@Descripción = '" + descripcion + "',@ID_Concierto = '" + idConciertoG + "',@Dia_Hora_Inicio='" + fechaI + "',@Dia_Hora_Fin='" + fechaI + "'", conexion)
+            modificar.ExecuteNonQuery()
+
+            conexion.Close()
+        End If
     End Sub
 
 
@@ -153,16 +159,21 @@ Public Class Administrador
 
         Next
 
+        If tbxN.Text = "" Or tbxAr.Text = "" Or tbxGe.Text = "" Or tbxDes.Text = "" Then
 
-        MessageBox.Show("holi")
-        Dim agregar As SqlCommand
-        conexion.Open()
-        agregar = New SqlCommand("EXEC Agregar  @Nombre = '" + Nombre + "',@Artista = '" + Artista + "' ,@Género = '" + Genero + "' ,@Descripción = '" + Descripcion + "',@Dia_Hora_Inicio='" + fechaIA + "',@Dia_Hora_Fin='" + fechaFA + "'", conexion)
-        agregar.ExecuteNonQuery()
+            MessageBox.Show("Faltan uno o varios campos por llenar")
 
-        MessageBox.Show("agregado")
-        conexion.Close()
+        Else
 
+            MessageBox.Show("Agregado")
+            Dim agregar As SqlCommand
+            conexion.Open()
+            agregar = New SqlCommand("EXEC Agregar  @Nombre = '" + Nombre + "',@Artista = '" + Artista + "' ,@Género = '" + Genero + "' ,@Descripción = '" + Descripcion + "',@Dia_Hora_Inicio='" + fechaIA + "',@Dia_Hora_Fin='" + fechaFA + "'", conexion)
+            agregar.ExecuteNonQuery()
+
+            MessageBox.Show("agregado")
+            conexion.Close()
+        End If
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
