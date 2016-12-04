@@ -20,6 +20,7 @@ Public Class Administrador
         Dim data As SqlDataReader
 
 
+
         DateTimePickerInicio.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
         DateTimePicker5Fin.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
         DateTimePicker4Fi.CustomFormat = "yyyy/MM/dd hh:mm:ss tt"
@@ -35,6 +36,7 @@ Public Class Administrador
             cbxConcierto.Items.Add(RTrim(data("Nombre")))
             cbxEliminarC.Items.Add(RTrim(data("Nombre")))
         End While
+
         conexion.Close()
 
 
@@ -177,6 +179,29 @@ Public Class Administrador
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        conexion.Open()
+        Dim data As SqlDataReader
+        Dim mipeticion As SqlCommand
+        Dim eliminar As SqlCommand
+        Dim eliminar2 As SqlCommand
+        Dim eliminar3 As SqlCommand
 
+        eliminar = New SqlCommand("Delete from boleto where boleto.ID_Concierto =(Select Concierto.ID_Concierto  from concierto where Concierto.Nombre= '" + cbxEliminarC.SelectedItem + "')", conexion)
+        eliminar2 = New SqlCommand("Delete from agenda where agenda.ID_Concierto =(Select Concierto.ID_Concierto  from concierto where Concierto.Nombre= '" + cbxEliminarC.SelectedItem + "')", conexion)
+        eliminar3 = New SqlCommand("Delete from Concierto where Concierto.Nombre='" + cbxEliminarC.SelectedItem + "'", conexion)
+        eliminar.ExecuteNonQuery()
+        eliminar2.ExecuteNonQuery()
+        eliminar3.ExecuteNonQuery()
+        MessageBox.Show("Haz eliminado el concierto: " + cbxEliminarC.SelectedItem)
+        cbxEliminarC.Items.Clear()
+        mipeticion = New SqlCommand("SELECT Nombre FROM Concierto", conexion)
+        Data = mipeticion.ExecuteReader
+        While data.Read
+            cbxEliminarC.Items.Add(RTrim(Data("Nombre")))
+        End While
+        conexion.Close()
     End Sub
 End Class
+
+
+
