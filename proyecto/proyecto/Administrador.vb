@@ -128,6 +128,11 @@ Public Class Administrador
             modificar = New SqlCommand("EXEC Modificar  @Nombre = '" + nombre + "',@Artista = '" + artista + "' ,@Género = '" + genero + "' ,@Descripción = '" + descripcion + "',@ID_Concierto = '" + idConciertoG + "',@Dia_Hora_Inicio='" + fechaI + "',@Dia_Hora_Fin='" + fechaI + "'", conexion)
             modificar.ExecuteNonQuery()
 
+            tbxNombre.Clear()
+            tbxArtista.Clear()
+            tbxGenero.Clear()
+            tbxDescripcion.Clear()
+
             cbxEliminarC.Items.Clear()
             cbxConcierto.Items.Clear()
             Dim data As SqlDataReader
@@ -199,6 +204,11 @@ Public Class Administrador
                 agregar.ExecuteNonQuery()
 
                 MessageBox.Show("agregado")
+
+                tbxN.Clear()
+                tbxAr.Clear()
+                tbxGe.Clear()
+                tbxDes.Clear()
 
                 cbxEliminarC.Items.Clear()
                 cbxConcierto.Items.Clear()
