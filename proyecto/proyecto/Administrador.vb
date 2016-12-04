@@ -100,6 +100,9 @@ Public Class Administrador
         Dim x As String() = fechaF.Split(".")
         fechaF = ""
         For Each y As String In x
+            If y = " m" Then
+                y = "m"
+            End If
             fechaF = fechaF + y
 
         Next
@@ -107,6 +110,9 @@ Public Class Administrador
         Dim xx As String() = fechaI.Split(".")
         fechaI = ""
         For Each yy As String In xx
+            If yy = " m" Then
+                yy = "m"
+            End If
             fechaI = fechaI + yy
 
         Next
@@ -122,6 +128,17 @@ Public Class Administrador
             modificar = New SqlCommand("EXEC Modificar  @Nombre = '" + nombre + "',@Artista = '" + artista + "' ,@Género = '" + genero + "' ,@Descripción = '" + descripcion + "',@ID_Concierto = '" + idConciertoG + "',@Dia_Hora_Inicio='" + fechaI + "',@Dia_Hora_Fin='" + fechaI + "'", conexion)
             modificar.ExecuteNonQuery()
 
+            cbxEliminarC.Items.Clear()
+            cbxConcierto.Items.Clear()
+            Dim data As SqlDataReader
+            Dim mipeticion As SqlCommand
+            mipeticion = New SqlCommand("SELECT Nombre FROM Concierto", conexion)
+            data = mipeticion.ExecuteReader
+            While data.Read
+                cbxConcierto.Items.Add(RTrim(data("Nombre")))
+                cbxEliminarC.Items.Add(RTrim(data("Nombre")))
+            End While
+
             conexion.Close()
         End If
     End Sub
@@ -135,47 +152,71 @@ Public Class Administrador
         Dim Descripcion As String
         Dim fechaIA As String
         Dim fechaFA As String
+        Dim existe As Boolean = False
         Nombre = tbxN.Text
-        Artista = tbxAr.Text
-        Genero = tbxGe.Text
-        Descripcion = tbxDes.Text
-        fechaIA = DateTimePickerIni.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
-        fechaFA = DateTimePicker4Fi.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
-        Dim x As String() = fechaFA.Split(".")
-        fechaFA = ""
-        For Each y As String In x
-            If y = " m" Then
-                y = "m"
+        For Each item As Object In cbxEliminarC.Items
+            If item.ToString = Nombre Then
+                existe = True
+                MessageBox.Show("Ya existe un concierto llamado " + Nombre)
             End If
-            fechaFA = fechaFA + y
-
         Next
+        If existe = False Then
+            Artista = tbxAr.Text
+            Genero = tbxGe.Text
+            Descripcion = tbxDes.Text
+            fechaIA = DateTimePickerIni.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
+            fechaFA = DateTimePicker4Fi.Value.ToString("yyyy-MM-dd hh:mm:ss tt")
+            Dim x As String() = fechaFA.Split(".")
+            fechaFA = ""
+            For Each y As String In x
+                If y = " m" Then
+                    y = "m"
+                End If
+                fechaFA = fechaFA + y
 
-        Dim xx As String() = fechaIA.Split(".")
-        fechaIA = ""
-        For Each yy As String In xx
-            If yy = " m" Then
-                yy = "m"
+            Next
+
+            Dim xx As String() = fechaIA.Split(".")
+            fechaIA = ""
+            For Each yy As String In xx
+                If yy = " m" Then
+                    yy = "m"
+                End If
+                fechaIA = fechaIA + yy
+
+            Next
+
+            If tbxN.Text = "" Or tbxAr.Text = "" Or tbxGe.Text = "" Or tbxDes.Text = "" Then
+
+                MessageBox.Show("Faltan uno o varios campos por llenar")
+
+            Else
+
+                MessageBox.Show("Agregado")
+                Dim agregar As SqlCommand
+                conexion.Open()
+                agregar = New SqlCommand("EXEC Agregar  @Nombre = '" + Nombre + "',@Artista = '" + Artista + "' ,@Género = '" + Genero + "' ,@Descripción = '" + Descripcion + "',@Dia_Hora_Inicio='" + fechaIA + "',@Dia_Hora_Fin='" + fechaFA + "'", conexion)
+                agregar.ExecuteNonQuery()
+
+                MessageBox.Show("agregado")
+
+                cbxEliminarC.Items.Clear()
+                cbxConcierto.Items.Clear()
+                Dim data As SqlDataReader
+                Dim mipeticion As SqlCommand
+                mipeticion = New SqlCommand("SELECT Nombre FROM Concierto", conexion)
+                data = mipeticion.ExecuteReader
+                While data.Read
+                    cbxConcierto.Items.Add(RTrim(data("Nombre")))
+                    cbxEliminarC.Items.Add(RTrim(data("Nombre")))
+                End While
+                conexion.Close()
+
+
+
             End If
-            fechaIA = fechaIA + yy
-
-        Next
-
-        If tbxN.Text = "" Or tbxAr.Text = "" Or tbxGe.Text = "" Or tbxDes.Text = "" Then
-
-            MessageBox.Show("Faltan uno o varios campos por llenar")
-
-        Else
-
-            MessageBox.Show("Agregado")
-            Dim agregar As SqlCommand
-            conexion.Open()
-            agregar = New SqlCommand("EXEC Agregar  @Nombre = '" + Nombre + "',@Artista = '" + Artista + "' ,@Género = '" + Genero + "' ,@Descripción = '" + Descripcion + "',@Dia_Hora_Inicio='" + fechaIA + "',@Dia_Hora_Fin='" + fechaFA + "'", conexion)
-            agregar.ExecuteNonQuery()
-
-            MessageBox.Show("agregado")
-            conexion.Close()
         End If
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -194,9 +235,11 @@ Public Class Administrador
         eliminar3.ExecuteNonQuery()
         MessageBox.Show("Haz eliminado el concierto: " + cbxEliminarC.SelectedItem)
         cbxEliminarC.Items.Clear()
+        cbxConcierto.Items.Clear()
         mipeticion = New SqlCommand("SELECT Nombre FROM Concierto", conexion)
         Data = mipeticion.ExecuteReader
         While data.Read
+            cbxConcierto.Items.Add(RTrim(data("Nombre")))
             cbxEliminarC.Items.Add(RTrim(Data("Nombre")))
         End While
         conexion.Close()
