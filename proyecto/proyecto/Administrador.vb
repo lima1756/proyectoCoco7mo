@@ -136,6 +136,9 @@ Public Class Administrador
         Dim x As String() = fechaFA.Split(".")
         fechaFA = ""
         For Each y As String In x
+            If y = " m" Then
+                y = "m"
+            End If
             fechaFA = fechaFA + y
 
         Next
@@ -143,6 +146,9 @@ Public Class Administrador
         Dim xx As String() = fechaIA.Split(".")
         fechaIA = ""
         For Each yy As String In xx
+            If yy = " m" Then
+                yy = "m"
+            End If
             fechaIA = fechaIA + yy
 
         Next
@@ -151,7 +157,7 @@ Public Class Administrador
         MessageBox.Show("holi")
         Dim agregar As SqlCommand
         conexion.Open()
-        agregar = New SqlCommand("EXEC Agregar  @Nombre = '" + Nombre + "',@Artista = '" + Artista + "' ,@Género = '" + Genero + "' ,@Descripción = '" + Descripcion + "',@Dia_Hora_Inicio='" + fechaIA + "',@Dia_Hora_Fin='" + fechaIA + "'", conexion)
+        agregar = New SqlCommand("EXEC Agregar  @Nombre = '" + Nombre + "',@Artista = '" + Artista + "' ,@Género = '" + Genero + "' ,@Descripción = '" + Descripcion + "',@Dia_Hora_Inicio='" + fechaIA + "',@Dia_Hora_Fin='" + fechaFA + "'", conexion)
         agregar.ExecuteNonQuery()
 
         MessageBox.Show("agregado")
