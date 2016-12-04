@@ -244,6 +244,10 @@ Public Class Administrador
         End While
         conexion.Close()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Vendedor.Show()
+    End Sub
 End Class
 
 
