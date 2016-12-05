@@ -128,14 +128,14 @@ Public Class Vendedor
         IDc.Close()
 
 
-        Dim cmd As String = "SELECT  asiento.Fila, asiento.Numero, asiento.id_Asiento FROM asiento WHERE asiento.id_Asiento NOT IN (Select  asiento.id_Asiento FROM asiento, boleto  WHERE boleto.id_Asiento = asiento.id_Asiento And boleto.id_Concierto='" + idConcert + "') And id_Zona = '" + zonaSel + "'"
+        Dim cmd As String = "SELECT  asiento.Fila FROM asiento WHERE asiento.id_Asiento NOT IN (Select  asiento.id_Asiento FROM asiento, boleto  WHERE boleto.id_Asiento = asiento.id_Asiento And boleto.id_Concierto='" + idConcert + "') And id_Zona = '" + zonaSel + "' Group By asiento.Fila"
         FilaYNumero = New SqlCommand(cmd, conexion)
 
 
         DATOS = FilaYNumero.ExecuteReader
         While DATOS.Read
             CbxFila.Items.Add(RTrim(DATOS("Fila")))
-            CbxNumero.Items.Add(RTrim(DATOS("Numero")))
+            '            CbxNumero.Items.Add(RTrim(DATOS("Numero")))
         End While
         DATOS.Close()
         conexion.Close()
