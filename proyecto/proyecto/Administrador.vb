@@ -256,7 +256,9 @@ Public Class Administrador
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Vendedor.Show()
+        Dim vendedor As New Vendedor
+        vendedor.Show()
+
     End Sub
 
     Private Sub AgrUs_Click(sender As Object, e As EventArgs) Handles AgrUs.Click
