@@ -10,12 +10,17 @@ Public Class Conectar
         TextBox1.DataBindings.Add("Text", Cnt, "Conexion.Cadena")
         Dim intento As String
         intento = TextBox1.Text
+        Dim peticion As SqlCommand
+        Dim datos As SqlDataReader
 
         Try
             conexion = New SqlConnection(intento)
             conexion.Open()
+            peticion = New SqlCommand("select * from Trabajador", conexion)
+            datos = peticion.ExecuteReader
             Me.Finalize()
             Inicio.Show()
+            conexion.Close()
 
         Catch ex As Exception
             err = True
@@ -36,6 +41,8 @@ Public Class Conectar
 
             Me.Finalize()
             Inicio.Show()
+            conexion.Close()
+
         Catch ex As Exception
             err = True
             MessageBox.Show("la cadena de conexion no es valida")
