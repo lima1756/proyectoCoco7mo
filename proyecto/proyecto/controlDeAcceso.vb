@@ -16,26 +16,7 @@ Public Class controlDeAcceso
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
-    Private Sub controlDeAcceso_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
-
-        Dim DatosZona As SqlCommand
-        Dim datos As SqlDataReader
-
-        conexion.Open()
-
-
-        DatosZona = New SqlCommand("select * from Zona ", conexion)
-        datos = DatosZona.ExecuteReader
-        While datos.Read
-            cbxZona.Items.Add(RTrim(datos("ID_Zona")))
-
-        End While
-        conexion.Close()
-
-
-
+    Private Sub controlDeAcceso_Load(sender As Object, e As EventArgs)
 
     End Sub
 

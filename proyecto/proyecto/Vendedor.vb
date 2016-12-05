@@ -345,4 +345,5 @@ Public Class Vendedor
         conexion.Close()
 
     End Sub
+
 End Class

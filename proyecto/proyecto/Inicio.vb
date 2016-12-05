@@ -33,9 +33,6 @@ Public Class Inicio
         Dim validUs As Boolean
         Dim validC As Boolean
         Dim trabajador As Int16
-        Dim Administrador As New Administrador
-        Dim vendedor As New Vendedor
-        Dim controlDeAcceso As New controlDeAcceso
         conexion.Open()
         peticion = New SqlCommand("select * from Trabajador", conexion)
         datos = peticion.ExecuteReader
@@ -79,16 +76,28 @@ Public Class Inicio
                 ElseIf validC = True Then
 
                     If trabajador = 1 Then
-                        Administrador.Show()
-                        Me.Finalize()
+                        Dim window As New Administrador()
+                        Me.Hide()
+                        Dim dialogResult = window.ShowDialog()
+                        If dialogResult = System.Windows.Forms.DialogResult.Cancel Then
+                            Me.Show()
+                        End If
                     End If
                     If trabajador = 2 Then
-                        vendedor.Show()
-                        Me.Finalize()
+                        Dim window As New Vendedor()
+                        Me.Hide()
+                        Dim dialogResult = window.ShowDialog()
+                        If dialogResult = System.Windows.Forms.DialogResult.Cancel Then
+                            Me.Show()
+                        End If
                     End If
                     If trabajador = 3 Then
-                        controlDeAcceso.Show()
-                        Me.Finalize()
+                        Dim window As New controlDeAcceso()
+                        Me.Hide()
+                        Dim dialogResult = window.ShowDialog()
+                        If dialogResult = System.Windows.Forms.DialogResult.Cancel Then
+                            Me.Show()
+                        End If
                     End If
                 End If
 
@@ -105,7 +114,8 @@ Public Class Inicio
 
     Private Sub Inicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If err = True Then
-            Conectar.Show()
+            Dim x As New Conectar()
+            x.ShowDialog()
 
         Else
 
@@ -123,5 +133,9 @@ Public Class Inicio
         If e.KeyCode = 13 Then
             btnIniciar.PerformClick()
         End If
+    End Sub
+
+    Private Sub Inicio_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        System.Environment.Exit(0)
     End Sub
 End Class

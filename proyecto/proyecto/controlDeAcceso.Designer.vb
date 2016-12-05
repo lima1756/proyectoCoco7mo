@@ -33,7 +33,7 @@ Partial Class controlDeAcceso
         '
         Me.cbxZona.FormattingEnabled = True
         Me.cbxZona.Location = New System.Drawing.Point(108, 57)
-        Me.cbxZona.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbxZona.Margin = New System.Windows.Forms.Padding(4)
         Me.cbxZona.Name = "cbxZona"
         Me.cbxZona.Size = New System.Drawing.Size(160, 26)
         Me.cbxZona.TabIndex = 0
@@ -51,7 +51,7 @@ Partial Class controlDeAcceso
         'txtFolio
         '
         Me.txtFolio.Location = New System.Drawing.Point(108, 217)
-        Me.txtFolio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtFolio.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFolio.Name = "txtFolio"
         Me.txtFolio.Size = New System.Drawing.Size(160, 25)
         Me.txtFolio.TabIndex = 2
@@ -70,7 +70,7 @@ Partial Class controlDeAcceso
         '
         Me.btnRevisar.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnRevisar.Location = New System.Drawing.Point(145, 279)
-        Me.btnRevisar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnRevisar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRevisar.Name = "btnRevisar"
         Me.btnRevisar.Size = New System.Drawing.Size(100, 32)
         Me.btnRevisar.TabIndex = 4
@@ -89,7 +89,7 @@ Partial Class controlDeAcceso
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbxZona)
         Me.Font = New System.Drawing.Font("Palatino Linotype", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "controlDeAcceso"
         Me.Text = "Control de Acceso Koncert"
         Me.ResumeLayout(False)
