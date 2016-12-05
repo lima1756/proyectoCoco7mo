@@ -1,4 +1,5 @@
 <?xml version="1.0" standalone="yes"?>
 <Conexion>
-  <Cadena>Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=prograAplicada;Data Source=SAMANTHA</Cadena>
+  <Cadena>
+    Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=prograAplicada;Data Source=DESKTOP-7I4ENCA\SQLEXPRESS</Cadena>
 </Conexion>
