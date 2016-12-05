@@ -103,6 +103,7 @@ Partial Class Administrador
         '
         'TabPage5
         '
+        Me.TabPage5.BackColor = System.Drawing.Color.Turquoise
         Me.TabPage5.Controls.Add(Me.tbxGe)
         Me.TabPage5.Controls.Add(Me.Label20)
         Me.TabPage5.Controls.Add(Me.tbxDes)
@@ -116,6 +117,7 @@ Partial Class Administrador
         Me.TabPage5.Controls.Add(Me.tbxAr)
         Me.TabPage5.Controls.Add(Me.Label7)
         Me.TabPage5.Controls.Add(Me.tbxN)
+        Me.TabPage5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.TabPage5.Location = New System.Drawing.Point(4, 27)
         Me.TabPage5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage5.Name = "TabPage5"
@@ -123,20 +125,19 @@ Partial Class Administrador
         Me.TabPage5.Size = New System.Drawing.Size(434, 419)
         Me.TabPage5.TabIndex = 0
         Me.TabPage5.Text = "Agregar Concierto"
-        Me.TabPage5.UseVisualStyleBackColor = True
         '
         'tbxGe
         '
-        Me.tbxGe.Location = New System.Drawing.Point(7, 144)
+        Me.tbxGe.Location = New System.Drawing.Point(96, 176)
         Me.tbxGe.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbxGe.Name = "tbxGe"
-        Me.tbxGe.Size = New System.Drawing.Size(116, 25)
+        Me.tbxGe.Size = New System.Drawing.Size(233, 25)
         Me.tbxGe.TabIndex = 35
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(3, 199)
+        Me.Label20.Location = New System.Drawing.Point(92, 205)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(81, 18)
         Me.Label20.TabIndex = 34
@@ -144,27 +145,28 @@ Partial Class Administrador
         '
         'tbxDes
         '
-        Me.tbxDes.Location = New System.Drawing.Point(7, 219)
+        Me.tbxDes.Location = New System.Drawing.Point(96, 225)
         Me.tbxDes.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbxDes.MaxLength = 40
         Me.tbxDes.Name = "tbxDes"
-        Me.tbxDes.Size = New System.Drawing.Size(251, 25)
+        Me.tbxDes.Size = New System.Drawing.Size(233, 25)
         Me.tbxDes.TabIndex = 33
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(115, 383)
+        Me.btnAgregar.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnAgregar.Location = New System.Drawing.Point(181, 358)
         Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(80, 32)
         Me.btnAgregar.TabIndex = 13
         Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'DateTimePicker4Fi
         '
         Me.DateTimePicker4Fi.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker4Fi.Location = New System.Drawing.Point(7, 352)
+        Me.DateTimePicker4Fi.Location = New System.Drawing.Point(96, 326)
         Me.DateTimePicker4Fi.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DateTimePicker4Fi.Name = "DateTimePicker4Fi"
         Me.DateTimePicker4Fi.Size = New System.Drawing.Size(233, 25)
@@ -173,7 +175,7 @@ Partial Class Administrador
         'DateTimePickerIni
         '
         Me.DateTimePickerIni.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePickerIni.Location = New System.Drawing.Point(7, 304)
+        Me.DateTimePickerIni.Location = New System.Drawing.Point(96, 278)
         Me.DateTimePickerIni.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DateTimePickerIni.Name = "DateTimePickerIni"
         Me.DateTimePickerIni.Size = New System.Drawing.Size(233, 25)
@@ -182,7 +184,7 @@ Partial Class Administrador
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(3, 332)
+        Me.Label11.Location = New System.Drawing.Point(92, 306)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(122, 18)
         Me.Label11.TabIndex = 8
@@ -191,7 +193,7 @@ Partial Class Administrador
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(3, 284)
+        Me.Label10.Location = New System.Drawing.Point(92, 258)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(140, 18)
         Me.Label10.TabIndex = 7
@@ -200,7 +202,7 @@ Partial Class Administrador
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(3, 112)
+        Me.Label9.Location = New System.Drawing.Point(92, 144)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(61, 18)
         Me.Label9.TabIndex = 5
@@ -209,7 +211,7 @@ Partial Class Administrador
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(3, 60)
+        Me.Label8.Location = New System.Drawing.Point(92, 92)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(55, 18)
         Me.Label8.TabIndex = 3
@@ -217,16 +219,16 @@ Partial Class Administrador
         '
         'tbxAr
         '
-        Me.tbxAr.Location = New System.Drawing.Point(7, 80)
+        Me.tbxAr.Location = New System.Drawing.Point(96, 112)
         Me.tbxAr.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbxAr.Name = "tbxAr"
-        Me.tbxAr.Size = New System.Drawing.Size(116, 25)
+        Me.tbxAr.Size = New System.Drawing.Size(233, 25)
         Me.tbxAr.TabIndex = 2
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(3, 9)
+        Me.Label7.Location = New System.Drawing.Point(92, 41)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(125, 18)
         Me.Label7.TabIndex = 1
@@ -234,10 +236,10 @@ Partial Class Administrador
         '
         'tbxN
         '
-        Me.tbxN.Location = New System.Drawing.Point(7, 28)
+        Me.tbxN.Location = New System.Drawing.Point(96, 60)
         Me.tbxN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbxN.Name = "tbxN"
-        Me.tbxN.Size = New System.Drawing.Size(116, 25)
+        Me.tbxN.Size = New System.Drawing.Size(233, 25)
         Me.tbxN.TabIndex = 0
         '
         'TabPage7
