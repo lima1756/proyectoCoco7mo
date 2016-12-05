@@ -60,23 +60,23 @@ Partial Class Administrador
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.AgrUs = New System.Windows.Forms.Button()
-        Me.EdU = New System.Windows.Forms.TextBox()
-        Me.NomU = New System.Windows.Forms.TextBox()
-        Me.Con = New System.Windows.Forms.TextBox()
-        Me.EmailU = New System.Windows.Forms.TextBox()
-        Me.ApU = New System.Windows.Forms.TextBox()
-        Me.Usuario = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Vendedor = New System.Windows.Forms.RadioButton()
-        Me.Admin = New System.Windows.Forms.RadioButton()
         Me.Ctrl_Acceso = New System.Windows.Forms.RadioButton()
+        Me.Admin = New System.Windows.Forms.RadioButton()
+        Me.Vendedor = New System.Windows.Forms.RadioButton()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Usuario = New System.Windows.Forms.TextBox()
+        Me.ApU = New System.Windows.Forms.TextBox()
+        Me.EmailU = New System.Windows.Forms.TextBox()
+        Me.Con = New System.Windows.Forms.TextBox()
+        Me.NomU = New System.Windows.Forms.TextBox()
+        Me.EdU = New System.Windows.Forms.TextBox()
+        Me.AgrUs = New System.Windows.Forms.Button()
         Me.TabControl3.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TabPage7.SuspendLayout()
@@ -494,127 +494,26 @@ Partial Class Administrador
         Me.TabPage1.TabIndex = 4
         Me.TabPage1.Text = "Agregar Usuario"
         '
-        'AgrUs
+        'Ctrl_Acceso
         '
-        Me.AgrUs.BackColor = System.Drawing.Color.RoyalBlue
-        Me.AgrUs.Location = New System.Drawing.Point(269, 354)
-        Me.AgrUs.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.AgrUs.Name = "AgrUs"
-        Me.AgrUs.Size = New System.Drawing.Size(87, 28)
-        Me.AgrUs.TabIndex = 32
-        Me.AgrUs.Text = "Agregar"
-        Me.AgrUs.UseVisualStyleBackColor = False
+        Me.Ctrl_Acceso.AutoSize = True
+        Me.Ctrl_Acceso.Location = New System.Drawing.Point(36, 387)
+        Me.Ctrl_Acceso.Name = "Ctrl_Acceso"
+        Me.Ctrl_Acceso.Size = New System.Drawing.Size(133, 22)
+        Me.Ctrl_Acceso.TabIndex = 51
+        Me.Ctrl_Acceso.TabStop = True
+        Me.Ctrl_Acceso.Text = "Control de acceso"
+        Me.Ctrl_Acceso.UseVisualStyleBackColor = True
         '
-        'EdU
+        'Admin
         '
-        Me.EdU.Location = New System.Drawing.Point(36, 230)
-        Me.EdU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.EdU.Name = "EdU"
-        Me.EdU.Size = New System.Drawing.Size(251, 25)
-        Me.EdU.TabIndex = 33
-        '
-        'NomU
-        '
-        Me.NomU.Location = New System.Drawing.Point(36, 128)
-        Me.NomU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.NomU.Name = "NomU"
-        Me.NomU.Size = New System.Drawing.Size(251, 25)
-        Me.NomU.TabIndex = 34
-        '
-        'Con
-        '
-        Me.Con.Location = New System.Drawing.Point(36, 77)
-        Me.Con.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Con.Name = "Con"
-        Me.Con.Size = New System.Drawing.Size(251, 25)
-        Me.Con.TabIndex = 35
-        '
-        'EmailU
-        '
-        Me.EmailU.Location = New System.Drawing.Point(36, 281)
-        Me.EmailU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.EmailU.Name = "EmailU"
-        Me.EmailU.Size = New System.Drawing.Size(251, 25)
-        Me.EmailU.TabIndex = 36
-        '
-        'ApU
-        '
-        Me.ApU.Location = New System.Drawing.Point(36, 179)
-        Me.ApU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ApU.Name = "ApU"
-        Me.ApU.Size = New System.Drawing.Size(251, 25)
-        Me.ApU.TabIndex = 37
-        '
-        'Usuario
-        '
-        Me.Usuario.Location = New System.Drawing.Point(36, 26)
-        Me.Usuario.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Usuario.Name = "Usuario"
-        Me.Usuario.Size = New System.Drawing.Size(251, 25)
-        Me.Usuario.TabIndex = 38
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 4)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 18)
-        Me.Label1.TabIndex = 39
-        Me.Label1.Text = "Usuario:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 259)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 18)
-        Me.Label2.TabIndex = 40
-        Me.Label2.Text = "Email:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 157)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 18)
-        Me.Label3.TabIndex = 41
-        Me.Label3.Text = "Apellido:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(33, 208)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(43, 18)
-        Me.Label4.TabIndex = 42
-        Me.Label4.Text = "Edad:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(33, 106)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 18)
-        Me.Label5.TabIndex = 43
-        Me.Label5.Text = "Nombre:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(33, 55)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(81, 18)
-        Me.Label6.TabIndex = 44
-        Me.Label6.Text = "Contraseña:"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(33, 310)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(108, 18)
-        Me.Label21.TabIndex = 45
-        Me.Label21.Text = "Tipo de usuario:"
+        Me.Admin.AutoSize = True
+        Me.Admin.Location = New System.Drawing.Point(36, 331)
+        Me.Admin.Name = "Admin"
+        Me.Admin.Size = New System.Drawing.Size(115, 22)
+        Me.Admin.TabIndex = 50
+        Me.Admin.Text = "Administrador"
+        Me.Admin.UseVisualStyleBackColor = True
         '
         'Vendedor
         '
@@ -628,26 +527,127 @@ Partial Class Administrador
         Me.Vendedor.Text = "Vendedor"
         Me.Vendedor.UseVisualStyleBackColor = True
         '
-        'Admin
+        'Label21
         '
-        Me.Admin.AutoSize = True
-        Me.Admin.Location = New System.Drawing.Point(36, 331)
-        Me.Admin.Name = "Admin"
-        Me.Admin.Size = New System.Drawing.Size(115, 22)
-        Me.Admin.TabIndex = 50
-        Me.Admin.Text = "Administrador"
-        Me.Admin.UseVisualStyleBackColor = True
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(33, 310)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(108, 18)
+        Me.Label21.TabIndex = 45
+        Me.Label21.Text = "Tipo de usuario:"
         '
-        'Ctrl_Acceso
+        'Label6
         '
-        Me.Ctrl_Acceso.AutoSize = True
-        Me.Ctrl_Acceso.Location = New System.Drawing.Point(36, 387)
-        Me.Ctrl_Acceso.Name = "Ctrl_Acceso"
-        Me.Ctrl_Acceso.Size = New System.Drawing.Size(133, 22)
-        Me.Ctrl_Acceso.TabIndex = 51
-        Me.Ctrl_Acceso.TabStop = True
-        Me.Ctrl_Acceso.Text = "Control de acceso"
-        Me.Ctrl_Acceso.UseVisualStyleBackColor = True
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(33, 55)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(81, 18)
+        Me.Label6.TabIndex = 44
+        Me.Label6.Text = "Contraseña:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(33, 106)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 18)
+        Me.Label5.TabIndex = 43
+        Me.Label5.Text = "Nombre:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(33, 208)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(43, 18)
+        Me.Label4.TabIndex = 42
+        Me.Label4.Text = "Edad:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(33, 157)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 18)
+        Me.Label3.TabIndex = 41
+        Me.Label3.Text = "Apellido:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(33, 259)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 18)
+        Me.Label2.TabIndex = 40
+        Me.Label2.Text = "Email:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(33, 4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(60, 18)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "Usuario:"
+        '
+        'Usuario
+        '
+        Me.Usuario.Location = New System.Drawing.Point(36, 26)
+        Me.Usuario.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Usuario.Name = "Usuario"
+        Me.Usuario.Size = New System.Drawing.Size(251, 25)
+        Me.Usuario.TabIndex = 38
+        '
+        'ApU
+        '
+        Me.ApU.Location = New System.Drawing.Point(36, 179)
+        Me.ApU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ApU.Name = "ApU"
+        Me.ApU.Size = New System.Drawing.Size(251, 25)
+        Me.ApU.TabIndex = 37
+        '
+        'EmailU
+        '
+        Me.EmailU.Location = New System.Drawing.Point(36, 281)
+        Me.EmailU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.EmailU.Name = "EmailU"
+        Me.EmailU.Size = New System.Drawing.Size(251, 25)
+        Me.EmailU.TabIndex = 36
+        '
+        'Con
+        '
+        Me.Con.Location = New System.Drawing.Point(36, 77)
+        Me.Con.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Con.Name = "Con"
+        Me.Con.Size = New System.Drawing.Size(251, 25)
+        Me.Con.TabIndex = 35
+        '
+        'NomU
+        '
+        Me.NomU.Location = New System.Drawing.Point(36, 128)
+        Me.NomU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.NomU.Name = "NomU"
+        Me.NomU.Size = New System.Drawing.Size(251, 25)
+        Me.NomU.TabIndex = 34
+        '
+        'EdU
+        '
+        Me.EdU.Location = New System.Drawing.Point(36, 230)
+        Me.EdU.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.EdU.Name = "EdU"
+        Me.EdU.Size = New System.Drawing.Size(251, 25)
+        Me.EdU.TabIndex = 33
+        '
+        'AgrUs
+        '
+        Me.AgrUs.BackColor = System.Drawing.Color.RoyalBlue
+        Me.AgrUs.Location = New System.Drawing.Point(269, 354)
+        Me.AgrUs.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.AgrUs.Name = "AgrUs"
+        Me.AgrUs.Size = New System.Drawing.Size(87, 28)
+        Me.AgrUs.TabIndex = 32
+        Me.AgrUs.Text = "Agregar"
+        Me.AgrUs.UseVisualStyleBackColor = False
         '
         'Administrador
         '
